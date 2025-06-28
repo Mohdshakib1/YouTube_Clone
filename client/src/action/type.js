@@ -1,0 +1,11 @@
+// Keep this as is - your action types are correctly defined
+export const DOWNLOADS_REQUEST = "DOWNLOADS_REQUEST";
+export const DOWNLOADS_SUCCESS = "DOWNLOADS_SUCCESS";
+export const DOWNLOADS_FAIL = "DOWNLOADS_FAIL";
+
+export const ADD_DOWNLOAD_REQUEST = "ADD_DOWNLOAD_REQUEST";
+export const ADD_DOWNLOAD_SUCCESS = "ADD_DOWNLOAD_SUCCESS";
+export const ADD_DOWNLOAD_FAIL = "ADD_DOWNLOAD_FAIL";
+
+export const REMOVE_DOWNLOAD = "REMOVE_DOWNLOAD";
+export const DOWNLOAD_ERROR = "DOWNLOAD_ERROR";
