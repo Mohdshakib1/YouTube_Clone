@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const API = axios.create({ baseURL: 'http://localhost:5000/' });
+const API = axios.create({ baseURL: 'https://youtube-clone-6q33.onrender.com' });
 
 API.interceptors.request.use((req) => {
   const profile = localStorage.getItem("Profile");
@@ -40,13 +40,13 @@ export const deletewatchlater=(videoid,viewer)=>API.delete(`/video/deletewatchla
 
 
 export const addToDownloads = (userId, videoId) =>
-  axios.post("http://localhost:5000/api/downloads/add", { userId, videoId });
+  axios.post("https://youtube-clone-6q33.onrender.com/api/downloads/add", { userId, videoId });
 
 export const getDownloads = (userId) =>
-  axios.get(`http://localhost:5000/api/downloads/user/${userId}`);
+  axios.get(`https://youtube-clone-6q33.onrender.com/api/downloads/user/${userId}`);
 
 export const upgradePremium = (userId) =>
-  axios.post(`http://localhost:5000/api/downloads/premium/${userId}`);
+  axios.post(`https://youtube-clone-6q33.onrender.com/api/downloads/premium/${userId}`);
 
 
 

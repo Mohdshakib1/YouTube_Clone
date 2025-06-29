@@ -37,8 +37,24 @@ uploadFolders.forEach(folder => {
   }
 });
 
-// Middleware
-app.use(cors());
+const allowedOrigins = [
+  'https://md-youtube-clone.netlify.app',
+  'http://localhost:3000' // for local testing
+];
+
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(bodyParser.json());

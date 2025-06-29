@@ -8,7 +8,7 @@ const Showvideo = ({vid}) => {
         <>
       <Link to={`/videopage/${vid._id}`}>
       <video
-  src={`http://localhost:5000/${vid.resolutions?.[0]?.path || vid.filepath}`}
+  src={`https://youtube-clone-6q33.onrender.com/${vid.resolutions?.[0]?.path || vid.filepath}`}
   className='video_ShowVideo'
   preload="metadata"
   muted

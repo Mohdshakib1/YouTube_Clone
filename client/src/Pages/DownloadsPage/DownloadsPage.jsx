@@ -7,7 +7,7 @@ const DownloadsPage = () => {
   const dispatch = useDispatch();
   const currentUser = useSelector(state => state.currentuserreducer);
   const { downloads } = useSelector(state => state.downloadReducer);
-  const API = process.env.REACT_APP_API || "http://localhost:5000";
+  const API = process.env.REACT_APP_API || "https://youtube-clone-6q33.onrender.com";
 
   const videoRefs = useRef([]);
 

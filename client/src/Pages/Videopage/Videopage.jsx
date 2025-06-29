@@ -17,7 +17,7 @@ const Videopage = () => {
   const { vid } = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const API = process.env.REACT_APP_API || "http://localhost:5000";
+  const API = process.env.REACT_APP_API || "https://youtube-clone-6q33.onrender.com";
 
   const vids = useSelector(state => state.videoreducer);
   const currentUser = useSelector(state => state.currentuserreducer);

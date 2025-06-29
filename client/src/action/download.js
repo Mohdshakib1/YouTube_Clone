@@ -12,7 +12,7 @@ export const addToDownloads = (downloadData) => async (dispatch) => {
   try {
     dispatch({ type: ADD_DOWNLOAD_REQUEST });
 
-    const { data } = await axios.post("http://localhost:5000/api/downloads/add", downloadData);
+    const { data } = await axios.post("https://youtube-clone-6q33.onrender.com/api/downloads/add", downloadData);
 
     // This part is important: check for failure from backend
     if (!data.success) {
@@ -42,7 +42,7 @@ export const getDownloads = (userId) => async (dispatch) => {
   try {
     dispatch({ type: DOWNLOADS_REQUEST });
 
-    const { data } = await axios.get(`http://localhost:5000/api/downloads/user/${userId}`);
+    const { data } = await axios.get(`https://youtube-clone-6q33.onrender.com/api/downloads/user/${userId}`);
     dispatch({ type: DOWNLOADS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
