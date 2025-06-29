@@ -39,7 +39,6 @@ uploadFolders.forEach(folder => {
 
 const allowedOrigins = [
   'https://md-youtube-clone.netlify.app',
-  'http://localhost:3000' // for local testing
 ];
 
 app.use(cors({

@@ -7,7 +7,7 @@ import fs from "fs";
 
 ffmpeg.setFfmpegPath(ffmpegPath);
 
-// ✅ Define resolution presets
+
 const resolutions = [320, 480, 720, 1080];
 const resolutionsMap = {
   320: { width: 568, height: 320 },
@@ -16,7 +16,7 @@ const resolutionsMap = {
   1080: { width: 1920, height: 1080 },
 };
 
-// ✅ Ensure all output folders exist
+
 const ensureFolders = () => {
   resolutions.forEach((res) => {
     const dir = `uploads/processed/${res}p`;
@@ -55,7 +55,7 @@ export const uploadvideo = async (req, res) => {
         return new Promise((resolve, reject) => {
           ffmpeg(originalPath)
             .outputOptions([
-              `-vf scale=${width}:${height}`,      // ✅ Force exact resolution
+              `-vf scale=${width}:${height}`,   
               "-c:v libx264",
               "-preset veryfast",
               "-crf 28",
